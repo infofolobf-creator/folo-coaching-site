@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Folo Coaching & Formation - Accompagnement personnalisé et formations pratiques pour professionnels et entrepreneurs au Burkina Faso et en Afrique.">
+  <title>Folo Coaching & Formation | Fabrice</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--primary:#2563eb;--primary-dark:#1d4ed8;--text:#111827;--text-light:#6b7280;--bg:#fff;--bg-alt:#f9fafb;--border:#e5e7eb;--radius:12px;--shadow:0 4px 6px -1px rgb(0 0 0/.1),0 2px 4px -2px rgb(0 0 0/.1);--success:#10b981}
+    *{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+    body{font-family:'Inter',system-ui,sans-serif;color:var(--text);background:var(--bg);line-height:1.6}
+    a{text-decoration:none;color:inherit}ul{list-style:none}img{max-width:100%;display:block}
+    button,.btn{display:inline-flex;align-items:center;justify-content:center;padding:.75rem 1.5rem;border-radius:var(--radius);font-weight:500;cursor:pointer;transition:all .2s;border:none;background:var(--primary);color:#fff}
+    button:hover,.btn:hover{background:var(--primary-dark);transform:translateY(-1px)}
+    .btn-outline{background:transparent;border:1.5px solid var(--primary);color:var(--primary)}.btn-outline:hover{background:var(--primary);color:#fff}
+    .btn-whatsapp{background:#25D366;color:#fff}.btn-whatsapp:hover{background:#128C7E}
+    .btn-success{background:var(--success)}.container{max-width:1100px;margin:0 auto;padding:0 1.5rem}
+    header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
+    nav{display:flex;align-items:center;justify-content:space-between;height:70px}
+    .logo{font-weight:700;font-size:1.25rem;color:var(--primary)}.nav-links{display:flex;gap:2rem;align-items:center}
+    .nav-links a{font-weight:500;color:var(--text-light);transition:color .2s}.nav-links a:hover{color:var(--primary)}
+    .mobile-toggle{display:none;background:none;border:none;font-size:1.5rem;cursor:pointer}
+    .hero{padding:6rem 0 4rem;text-align:center;background:linear-gradient(135deg,#f0f9ff,#e0f2fe)}
+    .hero h1{font-size:clamp(2rem,5vw,3.25rem);line-height:1.2;margin-bottom:1rem}
+    .hero p{font-size:1.15rem;color:var(--text-light);max-width:600px;margin:0 auto 2rem}
+    .hero-actions{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+    section{padding:5rem 0}.section-title{text-align:center;margin-bottom:3rem}
+    .section-title h2{font-size:2rem;margin-bottom:.5rem}.section-title p{color:var(--text-light);max-width:600px;margin:0 auto}
+    .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem}
+    .card{background:var(--bg-alt);border:1px solid var(--border);border-radius:var(--radius);padding:2rem;transition:box-shadow .3s,transform .3s}
+    .card:hover{box-shadow:var(--shadow);transform:translateY(-4px)}
+    .card h3{font-size:1.25rem;margin:1rem 0 .5rem}.card p{color:var(--text-light);margin-bottom:1.5rem}
+    .tag{display:inline-block;padding:.25rem .75rem;border-radius:99px;background:#dbeafe;color:var(--primary);font-size:.8rem;font-weight:500;margin-bottom:1rem}
+    .formations{background:var(--bg-alt)}.formation-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem}
+    .formation-card{background:var(--bg);border-radius:var(--radius);padding:1.5rem;border:1px solid var(--border);display:flex;flex-direction:column;justify-content:space-between}
+    .formation-card h3{margin-bottom:.5rem}.formation-meta{color:var(--text-light);font-size:.9rem;margin-bottom:1rem}
+    .formation-card .btn{width:100%}
+    .testimonials{text-align:center}.testimonial-grid{display:grid;gap:2rem;margin-top:2rem}
+    .testimonial{background:var(--bg-alt);padding:1.5rem;border-radius:var(--radius);font-style:italic}
+    .testimonial cite{display:block;margin-top:1rem;font-style:normal;font-weight:500;color:var(--text-light)}
+    .newsletter{background:var(--primary);color:#fff}.newsletter .section-title h2{color:#fff}.newsletter .section-title p{color:#bfdbfe}
+    .newsletter-form{display:flex;gap:.75rem;max-width:500px;margin:0 auto;flex-wrap:wrap}
+    .newsletter-form input{flex:1;min-width:200px;padding:.8rem 1rem;border-radius:var(--radius);border:none;font-family:inherit;font-size:1rem}
+    .newsletter-form button{background:#111827}.newsletter-form button:hover{background:#000}
+    .newsletter-note{font-size:.85rem;color:#bfdbfe;margin-top:1rem;text-align:center}
+    .client-area{background:var(--bg-alt)}.client-login{max-width:500px;margin:0 auto;background:var(--bg);padding:2rem;border-radius:var(--radius);border:1px solid var(--border)}
+    .client-login h3{margin-bottom:1rem}.client-login p{color:var(--text-light);margin-bottom:1.5rem}
+    .client-login form{display:flex;flex-direction:column;gap:1rem}
+    .client-login input{padding:.8rem;border:1px solid var(--border);border-radius:var(--radius);font-family:inherit;font-size:1rem}
+    .client-hint{font-size:.85rem;color:var(--text-light);margin-top:1rem}
+    .client-success{display:none;text-align:center;padding:2rem}.client-success.show{display:block}
+    .client-success .btn{margin-top:1rem}
+    .contact-wrapper{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start}
+    .contact-info h3{margin-bottom:1rem}.contact-info ul{margin:1.5rem 0}
+    .contact-info li{margin-bottom:.75rem;display:flex;gap:.5rem;align-items:center}
+    form{display:flex;flex-direction:column;gap:1rem}
+    input,textarea{padding:.8rem;border:1px solid var(--border);border-radius:var(--radius);font-family:inherit;font-size:1rem}
+    textarea{resize:vertical;min-height:120px}
+    footer{background:var(--text);color:#fff;padding:3rem 0 2rem}
+    .footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2rem;margin-bottom:2rem}
+    .footer-col h4{margin-bottom:1rem}.footer-col a{color:#cbd5e1;display:block;margin-bottom:.5rem}
+    .footer-col a:hover{color:#fff}
+    .copyright{text-align:center;padding-top:2rem;border-top:1px solid #374151;color:#9ca3af;font-size:.9rem}
+    .modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.5);z-index:1000;align-items:center;justify-content:center}
+    .modal.show{display:flex}.modal-content{background:var(--bg);padding:2rem;border-radius:var(--radius);max-width:500px;width:90%;position:relative}
+    .modal-close{position:absolute;top:1rem;right:1rem;background:none;border:none;font-size:1.5rem;cursor:pointer;color:var(--text-light)}
+    .modal-close:hover{color:var(--text)}
+    @media(max-width:768px){.nav-links{display:none;position:absolute;top:70px;left:0;right:0;background:var(--bg);flex-direction:column;padding:1.5rem;border-bottom:1px solid var(--border)}.nav-links.active{display:flex}.mobile-toggle{display:block}.contact-wrapper{grid-template-columns:1fr}.hero{padding:4rem 0 3rem}.newsletter-form{flex-direction:column}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <a href="#" class="logo">Folo Coaching & Formation</a>
+        <button class="mobile-toggle" aria-label="Menu">☰</button>
+        <ul class="nav-links">
+          <li><a href="#accueil">Accueil</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#formations">Formations</a></li>
+          <li><a href="#client">Espace Client</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="https://calendly.com/infofolo-bf/rdv-prive-one-to-one" target="_blank" class="btn btn-outline">Appel gratuit</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section id="accueil" class="hero">
+      <div class="container">
+        <h1>Transforme ton potentiel en résultats concrets</h1>
+        <p>Coaching personnalisé & formations pratiques pour professionnels et entrepreneurs au Burkina Faso et en Afrique.</p>
+        <div class="hero-actions">
+          <a href="https://calendly.com/infofolo-bf/rdv-prive-one-to-one" target="_blank" class="btn">Réserver un appel gratuit (30 min)</a>
+          <a href="#services" class="btn btn-outline">Découvrir l'offre</a>
+        </div>
+      </div>
+    </section>
+    <section id="services">
+      <div class="container">
+        <div class="section-title"><h2>Accompagnement sur mesure</h2><p>Des solutions adaptées à ton rythme, tes objectifs et ton secteur d'activité.</p></div>
+        <div class="services-grid">
+          <div class="card"><span class="tag">Coaching</span><h3>Coaching Individuel 1:1</h3><p>Séances privées pour clarifier ta vision, débloquer tes freins et construire une stratégie actionnable. Suivi hebdomadaire ou ponctuel.</p><a href="#contact" class="btn btn-outline">Je postule</a></div>
+          <div class="card"><span class="tag">Formation</span><h3>Formations Pratiques</h3><p>Programmes structurés, fiches outils et ateliers interactifs. Apprentissage par l'action avec support continu pendant 30 jours.</p><a href="#formations" class="btn btn-outline">Voir les programmes</a></div>
+          <div class="card"><span class="tag">Collectif</span><h3>Mastermind & Workshops</h3><p>Groupes de travail mensuels pour échanger, challenger tes idées et accélérer ta progression avec des pairs motivés.</p><a href="#contact" class="btn btn-outline">Rejoindre la liste d'attente</a></div>
+        </div>
+      </div>
+    </section>
+    <section id="formations" class="formations">
+      <div class="container">
+        <div class="section-title"><h2>Nos Formations</h2><p>Des parcours courts, denses et directement applicables à ton activité.</p></div>
+        <div class="formation-grid">
+          <div class="formation-card"><div><h3>Stratégie & Positionnement</h3><p class="formation-meta">🕒 4 semaines • 🎯 Débutants & Reconversion</p><p>Définis ton offre, cible tes clients idéaux et crée un message qui convertit.</p></div><a href="#contact" class="btn">Voir le programme</a></div>
+          <div class="formation-card"><div><h3>Productivité & Systèmes</h3><p class="formation-meta">🕒 3 semaines • 🎯 Freelances & Solopreneurs</p><p>Automatise, priorise et libère 10h/semaine grâce à des frameworks testés.</p></div><a href="#contact" class="btn">Voir le programme</a></div>
+          <div class="formation-card"><div><h3>Leadership & Communication</h3><p class="formation-meta">🕒 5 semaines • 🎯 Managers & Porteurs de projet</p><p>Donne du sens, fédère tes équipes et gère les conflits avec assurance.</p></div><a href="#contact" class="btn">Voir le programme</a></div>
+        </div>
+      </div>
+    </section>
+    <section class="testimonials">
+      <div class="container">
+        <div class="section-title"><h2>Ils ont travaillé avec Folo</h2></div>
+        <div class="testimonial-grid">
+          <div class="testimonial">"Le coaching m'a permis de passer de l'idée à la première vente en 3 semaines. Claire, direct, sans blabla."<cite>— Aïcha, Consultante RH</cite></div>
+          <div class="testimonial">"La formation Stratégie & Positionnement a changé ma façon de vendre. Enfin des outils qui marchent sur le terrain."<cite>— David, Fondateur SaaS</cite></div>
+        </div>
+      </div>
+    </section>
+    <section id="client" class="client-area">
+      <div class="container">
+        <div class="section-title"><h2>Espace Client</h2><p>Accède à tes ressources, fiches outils et supports de formation.</p></div>
+        <div id="client-login-form" class="client-login">
+          <h3>🔐 Accès réservé</h3><p>Entre ton email pour accéder à ton espace personnel. Un lien sécurisé te sera envoyé.</p>
+          <form id="client-access-form">
+            <input type="email" id="client-email" placeholder="Ton email professionnel" required>
+            <input type="password" id="client-password" placeholder="Mot de passe (optionnel)" autocomplete="off">
+            <button type="submit" class="btn btn-success">Accéder à mon espace</button>
+          </form>
+          <p class="client-hint">💡 Pas encore client ? <a href="#contact" style="color:var(--primary);font-weight:500">Réserve un appel découverte</a> pour commencer.</p>
+        </div>
+        <div id="client-success" class="client-success">
+          <h3>✅ Accès validé !</h3><p style="margin:1rem 0;color:var(--text-light)">Ton espace est prêt. Clique ci-dessous pour accéder à tes ressources.</p>
+          <a href="https://notion.so/VOTRE-LIEN-PRIVE" target="_blank" class="btn">📁 Accéder à mes ressources</a>
+          <p style="margin-top:1rem;font-size:.85rem;color:var(--text-light)">🔒 Lien sécurisé • Déconnexion : <a href="#" id="client-logout" style="color:var(--primary)">clique ici</a></p>
+        </div>
+      </div>
+    </section>
+    <section class="newsletter">
+      <div class="container">
+        <div class="section-title"><h2>Reçois nos conseils gratuits</h2><p>Une fois par semaine : stratégies, outils et inspirations pour accélérer ta croissance.</p></div>
+        <form class="newsletter-form" action="https://formspree.io/f/mredgven" method
